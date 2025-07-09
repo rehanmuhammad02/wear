@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wear Together</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+     <link rel="stylesheet" href="prices.css">
+     <link rel="icon" href="clothing-logo.jpeg.jpeg">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+
+    <a class="navbar-brand" data-aos="zoom-in">Wear Together</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item dropdown" id="shopDropdown">
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Shop</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="shop.html">All</a></li>
+            <li><a class="dropdown-item" href="shop.html">Men</a></li>
+            <li><a class="dropdown-item" href="shop.html">Women</a></li>
+            <li><a class="dropdown-item" href="shop.html">Kids</a></li>
+            <li><a class="dropdown-item" href="shop.html">Accessories</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="prices.html">Prices</a></li>
+        <li class="nav-item"><a class="nav-link" href="contactus.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">🛒 Cart</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const dropdown = document.getElementById('shopDropdown');
+  dropdown.addEventListener('mouseenter', () => {
+    if (window.innerWidth > 991) {
+      const dropdownMenu = bootstrap.Dropdown.getOrCreateInstance(dropdown.querySelector('[data-bs-toggle="dropdown"]'));
+      dropdownMenu.show();
+    }
+  });
+  dropdown.addEventListener('mouseleave', () => {
+    if (window.innerWidth > 991) {
+      const dropdownMenu = bootstrap.Dropdown.getOrCreateInstance(dropdown.querySelector('[data-bs-toggle="dropdown"]'));
+      dropdownMenu.hide();
+    }
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+<!-- //banner -->
+ <section class="hero-banner">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 data-aos="zoom-in">Wear Together</h1>
+      <p data-aos="fade-up">Made to Fit. Designed to Stand Out</p>
+      <a href="index.html" class="shop-btn" data-aos="zoom-in">Shop Now</a>
+    </div>
+  </section>
+  <!-- clothing prices -->
+    <!-- Top Heading -->
+  <section class="prices-heading-section">
+  <div class="heading-container">
+    <h2 data-aos="fade-down">Clothing Prices</h2>
+    <p data-aos="fade-up">
+      Discover unbeatable prices without compromising on style and quality.
+      Our collection offers top-notch fashion at rates that suit every budget.
+      Whether you're shopping for casual wear or formal fits, we've made sure
+      every item gives you the best value for your money.
+      Dress sharp, feel great — without breaking the bank.
+    </p>
+  </div>
+</section>
+  <!-- Clothing prices -->
+   <div class="container" id="contain">
+    <!-- Men -->
+    <div class="category" data-aos="zoom-in">
+      <img src="men--1.jpg" alt="Men">
+      <h2>Men</h2>
+      <div class="product">T-Shirt — 1500</div>
+      <div class="product">Button up — 2000</div>
+      <div class="product">Shorts — 1500</div>
+      <div class="product">Casual Shirt — 2000</div>
+      <div class="product">Pants — 2500</div>
+      <div class="product">Pent Coats — 10,000</div>
+      <div class="product">Waist Coats — 3500</div>
+      <div class="product">Eastern Wear — 4000</div>
+      <div class="product">Formal Shirts — 4500</div>
+      <div class="product">Coats — 5000</div>
+      <div class="product">Jackets — 5500</div>
+      <div class="product">Printed Shirts — 3000</div>
+    </div>
+    <!-- Women -->
+    <div class="category" data-aos="zoom-in">
+      <img src="women--1.jpg" alt="Women">
+      <h2>Women</h2>
+      <div class="product">Shalwar Kameez — 5000</div>
+      <div class="product">Long Shirts — 2000</div>
+      <div class="product">Pants — 1500</div>
+      <div class="product">Kurti — 3500</div>
+      <div class="product">Abaya — 5000</div>
+      <div class="product">Frocks — 3000</div>
+      <div class="product">Western Dress — 5000</div>
+      <div class="product">Gown — 4000</div>
+      <div class="product">Jacket — 4500</div>
+      <div class="product">Dupatta Set — 5000</div>
+      <div class="product">Denim Shirt — 5500</div>
+      <div class="product">Maxi — 6000</div>
+    </div>
+    <!-- Kids -->
+    <div class="category" data-aos="zoom-in">
+      <img src="kid--1.jpg" alt="Kids">
+      <h2>Kids</h2>
+      <div class="product">Shalwar Kameez — 3000</div>
+      <div class="product">Pants — 1000</div>
+      <div class="product">Shirts — 1500</div>
+      <div class="product">T-Shirts — 2000</div>
+      <div class="product">Jackets — 2500</div>
+      <div class="product">Pent Coats — 3000</div>
+      <div class="product">Waist Coats — 3500</div>
+      <div class="product">Eastern Dress — 4000</div>
+      <div class="product">Party Dress — 4500</div>
+      <div class="product">Sweaters — 5000</div>
+      <div class="product">Hoodies — 5500</div>
+      <div class="product">Printed Tees — 6000</div>
+    </div>
+    <!-- Accessories -->
+    <div class="category" data-aos="zoom-in">
+      <img src="accessories-1.jpg" alt="Accessories">
+      <h2>Accessories</h2>
+      <div class="product">Belt — 800</div>
+      <div class="product">Watch — 1000</div>
+      <div class="product">Sunglasses — 1500</div>
+      <div class="product">Cufflinks — 2000</div>
+      <div class="product">Wallet — 2500</div>
+      <div class="product">Pocket Square — 3000</div>
+      <div class="product">Bracelet — 3500</div>
+      <div class="product">Handbag — 4000</div>
+      <div class="product">Earrings — 4500</div>
+      <div class="product">Scarf — 5000</div>
+      <div class="product">Eyeglasses — 5500</div>
+      <div class="product">Crossbody — 6000</div>
+    </div>
+  </div>
+  <!-- images section -->
+   <section class="prices-content-section" data-aos="fade-up">
+  <div class="content-wrapper">
+    <div class="left-image">
+      <img src="men-18.jpg" alt="Clothing Prices">
+    </div>
+    <div class="right-info">
+      <h3>Affordable Fashion for Everyone</h3>
+      <p>
+        Our pricing model is simple: high quality, low price.
+        From trendy streetwear to classic essentials, we curate styles
+        that look premium but remain affordable.
+        Perfect for students, professionals, and families alike —
+        because great fashion should never be out of reach.
+      </p>
+    </div>
+  </div>
+</section>
+  <!-- footer -->
+<footer class="bg-black text-white pt-5 pb-4">
+  <div class="container">
+    <div class="row">
+      <!-- Social Icons -->
+      <div class="col-md-3 mb-4 text-center text-md-start">
+        <h5 class="text-uppercase mb-3 text-white">Follow Us</h5>
+        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+        <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-4"></i></a>
+        <a href="#" class="text-white me-3"><i class="bi bi-linkedin fs-4"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-youtube fs-4"></i></a>
+      </div>
+      <!-- Company Info -->
+      <div class="col-md-3 mb-4">
+        <h5 class="text-uppercase text-white">Wear Together</h5>
+        <p>Stylish clothing for Men, Women, and Kids. Shop the latest trends with comfort and confidence.</p>
+      </div>
+      <!-- Categories -->
+      <div class="col-md-3 mb-4">
+        <h5 class="text-uppercase text-white">Categories</h5>
+        <p><a href="shop.html" class="text-white text-decoration-none">Men</a></p>
+        <p><a href="shop.html" class="text-white text-decoration-none">Women</a></p>
+        <p><a href="shop.html" class="text-white text-decoration-none">Kids</a></p>
+        <p><a href="shop.html" class="text-white text-decoration-none">Accessories</a></p>
+      </div>
+    <!-- Newsletter Signup -->
+<div class="col-md-3 mb-4">
+  <h5 class="text-uppercase text-white">Newsletter</h5>
+  <p>Subscribe to get special offers, free giveaways, and new arrivals.</p>
+  <form>
+    <div class="input-group">
+      <input type="email" class="form-control" placeholder="Your email" required>
+      <button class="btn btn-danger" type="submit"><i class="bi bi-envelope-fill"></i></button>
+    </div>
+  </form>
+</div>
+    <hr class="border-secondary">
+    <div class="text-center">
+      <p class="mb-0">© 2025 <span class="text-white">Wear Together</span>. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+<!-- Back to Top Button -->
+<a href="#" id="backToTopBtn" class="btn btn-dark rounded-circle"
+   style="position: fixed; bottom: 80px; right: 20px; z-index: 9999; font-size: 28px; display: none;">
+  <i class="bi bi-arrow-up-circle text-white"></i>
+</a>
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/923001234567" target="_blank" class="btn btn-success rounded-circle"
+   style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; font-size: 28px;">
+  <i class="bi bi-whatsapp text-white"></i>
+</a>
+<!-- Scroll Script -->
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+  window.addEventListener("scroll", () => {
+    backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+  backToTopBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+  </body>
+</html>

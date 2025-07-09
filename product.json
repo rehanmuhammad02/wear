@@ -1,0 +1,338 @@
+[
+    {
+        "id": 1,
+        "category": "men",
+        "title": "Men's T-Shirt",
+        "price": 500,
+        "image": "men-tshirt.jpg"
+    },
+    {
+        "id": 2,
+        "category": "men",
+        "title": "Button up",
+        "price": 1000,
+        "image": "men-button up.jpg"
+    },
+    {
+        "id": 3,
+        "category": "men",
+        "title": "Men's  Short's",
+        "price": 1500,
+        "image": "men-shorts.jpg"
+    },
+    {
+        "id": 4,
+        "category": "men",
+        "title": "Men's Casual",
+        "price": 2000,
+        "image": "men-casual.jpg"
+    },
+    {
+        "id": 5,
+        "category": "men",
+        "title": "Men's Pent's",
+        "price": 2500,
+        "image": "men-pents.jpg"
+    },
+    {
+        "id": 6,
+        "category": "men",
+        "title": "Pent Coat's",
+        "price": 3000,
+        "image": "men-pent-coat.jpg"
+    },
+    {
+        "id": 7,
+        "category": "men",
+        "title": "Waist Coat's",
+        "price": 3500,
+        "image": "waist-coat.jpg"
+    },
+    {
+        "id": 8,
+        "category": "men",
+        "title": "Men's Eastern",
+        "price": 4000,
+        "image": "shalwas-kameez.jpg"
+    },
+    {
+        "id": 9,
+        "category": "men",
+        "title": "Men's Shirt's",
+        "price": 4500,
+        "image": "men-shirts.jpg"
+    },
+    {
+        "id": 10,
+        "category": "men",
+        "title": "Men's Coat's",
+        "price": 5000,
+        "image": "men-coats.jpg"
+    },
+    {
+        "id": 11,
+        "category": "men",
+        "title": "Men's Jacket's",
+        "price": 5500,
+        "image": "men-jacket.jpg"
+    },
+    {
+        "id": 12,
+        "category": "men",
+        "title": "Printed Shirts",
+        "price": 6000,
+        "image": "prited-shirts.jpg"
+    },
+    {
+        "id": 13,
+        "category": "women",
+        "title": "Women's Eastern",
+        "price": 500,
+        "image": "women-eastern-1.jpg"
+    },
+    {
+        "id": 14,
+        "category": "women",
+        "title": "Women's Eastern",
+        "price": 1000,
+        "image": "women-eastern-2.jpg"
+    },
+    {
+        "id": 15,
+        "category": "women",
+        "title": "Women's Eastern",
+        "price": 1500,
+        "image": "women-eastern-3.jpg"
+    },
+    {
+        "id": 16,
+        "category": "women",
+        "title": "Women's Eastern",
+        "price": 2000,
+        "image": "women-eastern-4.jpg"
+    },
+    {
+        "id": 17,
+        "category": "women",
+        "title": "Women's Eastern",
+        "price": 2500,
+        "image": "women-eastern-5.jpg"
+    },
+    {
+        "id": 18,
+        "category": "women",
+        "title": "Women's Eastern",
+        "price": 3000,
+        "image": "women-eastern-6.jpg"
+    },
+    {
+        "id": 19,
+        "category": "women",
+        "title": "Women's western",
+        "price": 3500,
+        "image": "women-eastern-7.jpg"
+    },
+    {
+        "id": 20,
+        "category": "women",
+        "title": "Women's western",
+        "price": 4000,
+        "image": "women-eastern-8.jpg"
+    },
+    {
+        "id": 21,
+        "category": "women",
+        "title": "Women's western",
+        "price": 4500,
+        "image": "women-eastern-9.jpg"
+    },
+    {
+        "id": 22,
+        "category": "women",
+        "title": "Women's western",
+        "price": 5000,
+        "image": "women-eastern-10.jpg"
+    },
+    {
+        "id": 23,
+        "category": "women",
+        "title": "Women's western",
+        "price": 5500,
+        "image": "women-eastern-11.jpg"
+    },
+    {
+        "id": 24,
+        "category": "women",
+        "title": "Women's western",
+        "price": 6000,
+        "image": "women-eastern-12.jpg"
+    },
+    {
+        "id": 25,
+        "category": "kids",
+        "title": "Kid's Eastern",
+        "price": 5000,
+        "image": "eastern-kids-1.jpg"
+    },
+    {
+        "id": 26,
+        "category": "kids",
+        "title": "Kid's Eastern",
+        "price": 3000,
+        "image": "eastern-kids-2.jpg"
+    },
+    {
+        "id": 27,
+        "category": "kids",
+        "title": "Kid's Eastern",
+        "price": 3500,
+        "image": "eastern-kids-3.jpg"
+    },
+    {
+        "id": 28,
+        "category": "kids",
+        "title": "Kid's Eastern",
+        "price": 2500,
+        "image": "eastern-kids-4.jpg"
+    },
+    {
+        "id": 29,
+        "category": "kids",
+        "title": "Kid's Eastern",
+        "price": 2500,
+        "image": "eastern-kids-5.jpg"
+    },
+    {
+        "id": 30,
+        "category": "kids",
+        "title": "Kid's Eastern",
+        "price": 3000,
+        "image": "eastern-kids-6.jpg"
+    },
+    {
+        "id": 31,
+        "category": "kids",
+        "title": "Kid's Eastern",
+        "price": 3500,
+        "image": "eastern-kids-7.jpg"
+    },
+    {
+        "id": 32,
+        "category": "kids",
+        "title": "Kid's Eastern",
+        "price": 4000,
+        "image": "eastern-kids-8.jpg"
+    },
+    {
+        "id": 33,
+        "category": "kids",
+        "title": "Kid's Eastern",
+        "price": 4500,
+        "image": "eastern-kids-9.jpg"
+    },
+    {
+        "id": 34,
+        "category": "kids",
+        "title": "Kid's Eastern",
+        "price": 5000,
+        "image": "eastern-kids-10.jpg"
+    },
+    {
+        "id": 35,
+        "category": "kids",
+        "title": "Kid's Eastern",
+        "price": 5500,
+        "image": "eastern-kids-11.jpg"
+    },
+    {
+        "id": 36,
+        "category": "kids",
+        "title": "Kid's Eastern",
+        "price": 6000,
+        "image": "eastern-kids-12.jpg"
+    },
+    {
+        "id": 37,
+        "category": "accessories",
+        "title": "Leather Belt",
+        "price": 1000,
+        "image": "belt.jpg"
+    },
+    {
+        "id": 38,
+        "category": "accessories",
+        "title": "Watch's",
+        "price": 3000,
+        "image": "watch.jpg"
+    },
+    {
+        "id": 39,
+        "category": "accessories",
+        "title": "Sunglasses",
+        "price": 5000,
+        "image": "Sunglasses.jpg"
+    },
+    {
+        "id": 40,
+        "category": "accessories",
+        "title": "Cufflinks Set",
+        "price": 2000,
+        "image": "Cufflinks Set.jpg"
+    },
+    {
+        "id": 41,
+        "category": "accessories",
+        "title": "Leather Wallet",
+        "price": 2500,
+        "image": "Wallet.jpg"
+    },
+    {
+        "id": 42,
+        "category": "accessories",
+        "title": "Pocket Square",
+        "price": 3000,
+        "image": "Pocket Square.jpg"
+    },
+    {
+        "id": 43,
+        "category": "accessories",
+        "title": "Charm Bracelet",
+        "price": 3500,
+        "image": "Bracelet.jpg"
+    },
+    {
+        "id": 44,
+        "category": "accessories",
+        "title": "Hand bag",
+        "price": 4000,
+        "image": "Handbag.jpg"
+    },
+    {
+        "id": 45,
+        "category": "accessories",
+        "title": "Drop Earrings",
+        "price": 4500,
+        "image": "Earrings.jpg"
+    },
+    {
+        "id": 46,
+        "category": "accessories",
+        "title": "Silk Scarf",
+        "price": 5000,
+        "image": "Scarf.jpg"
+    },
+    {
+        "id": 47,
+        "category": "accessories",
+        "title": "Eye Sunglasses",
+        "price": 5500,
+        "image": "Eye Sunglasses.jpg"
+    },
+    {
+        "id": 48,
+        "category": "accessories",
+        "title": "Purse",
+        "price": 6000,
+        "image": "Purse.jpg"
+    }
+]

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wear Together</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+     <link rel="stylesheet" href="shop.css">
+     <link rel="icon" href="clothing-logo.jpeg.jpeg">
+</head>
+<body>
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" data-aos="zoom-in">Wear Together</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item dropdown" id="shopDropdown">
+          <a class="nav-link dropdown-toggle d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown">
+            Shop 
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="shop.html?category=all">All</a></li>
+            <li><a class="dropdown-item" href="shop.html?category=men">Men</a></li>
+            <li><a class="dropdown-item" href="shop.html?category=women">Women</a></li>
+            <li><a class="dropdown-item" href="shop.html?category=kids">Kids</a></li>
+            <li><a class="dropdown-item" href="shop.html?category=accessories">Accessories</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="prices.html">Prices</a></li>
+        <li class="nav-item"><a class="nav-link" href="contactus.html">Contact</a></li>
+        <li class="nav-item position-relative">
+          <a class="nav-link cart-icon" href="#">
+            <i class="bi bi-cart fs-4"></i>
+            <span class="cart-badge" id="cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const dropdown = document.getElementById('shopDropdown');
+
+    if (window.innerWidth > 991 && dropdown) {
+      dropdown.addEventListener('mouseenter', () => {
+        const dropdownMenu = bootstrap.Dropdown.getOrCreateInstance(dropdown.querySelector('[data-bs-toggle="dropdown"]'));
+        dropdownMenu.show();
+      });
+      dropdown.addEventListener('mouseleave', () => {
+        const dropdownMenu = bootstrap.Dropdown.getOrCreateInstance(dropdown.querySelector('[data-bs-toggle="dropdown"]'));
+        dropdownMenu.hide();
+      });
+    }
+
+     // Cart count increment logic
+    const cartIcons = document.querySelectorAll('.add-to-cart');
+    const cartCount = document.getElementById('cart-count');
+    let count = 0;
+
+    cartIcons.forEach(icon => {
+      icon.addEventListener('click', () => {
+        count++;
+        cartCount.textContent = count;
+        cartCount.classList.add('cart-bump');
+        setTimeout(() => cartCount.classList.remove('cart-bump'), 300);
+      });
+    });
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+<!-- //banner -->
+ <section class="hero-banner">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 data-aos="fade-up">Wear Together</h1>
+      <p data-aos="zoom-in">Style for Every Story — Men, Women, Kids & More</p>
+      <a href="#pro" class="shop-btn" data-aos="fade-up">Shop Now</a>
+    </div>
+  </section>
+  <!-- style section-->
+  <section class="category-info-section">
+  <div class="category-heading">
+    <h2 data-aos="zoom-in">Choose Your Style</h2>
+  </div>
+  <div class="category-description">
+    <p data-aos="fade-down">
+      Select a category below to explore stylish collections for Men, Women, Kids, and Accessories.  
+      Click on “Shop” to view everything at once or pick a specific category to browse focused options.  
+      Each card shows high-quality fashion with a “Buy Now” button so you can directly contact us and place your order.  
+      Whether you're shopping for casual wear, activewear, or something special—your perfect fit is just a click away.  
+      Start shopping now and get your favorite clothing delivered with ease!
+    </p>
+  </div>
+</section>
+<section id="pro">
+<!-- Main Section -->
+  <!-- Heading -->
+  <div class="container mt-5">
+    <h2 class="text-center" id="product-heading" data-aos="zoom-in">All Products</h2>
+  </div>
+
+  <!-- Product Grid -->
+  <div class="container mt-4">
+    <div class="row" id="product-container"></div>
+  </div>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript -->
+  <script>
+    let allProducts = [];
+    const container = document.getElementById('product-container');
+    const heading = document.getElementById('product-heading');
+    const cartCountEl = document.getElementById('cart-count');
+
+    // Get cart count from localStorage
+    function updateCartCount() {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cartCountEl.textContent = cart.length;
+    }
+
+    // Add to cart and update count
+    function addToCart(product) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push(product);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+    }
+
+    function displayProducts(category) {
+      container.innerHTML = '';
+      const filtered = category === 'all'
+        ? allProducts
+        : allProducts.filter(p => p.category === category);
+
+      if (filtered.length === 0) {
+        container.innerHTML = '<p class="text-center text-muted">No products found.</p>';
+        heading.textContent = 'No Products';
+        return;
+      }
+      filtered.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'col-md-2 col-sm-4 col-6 mb-4';
+
+card.innerHTML = `
+  <div class="card product-card h-100">
+    <img src="${product.image}" class="product-image"  data-aos="zoom-in" alt="${product.title}">
+    <div class="product-info p-2">
+      <h5>${product.title}</h5>
+      <p class="text-muted mb-2">Rs. ${product.price}</p>
+      <div class="text-center">
+        <h6 class="mb-1">Add to Cart</h6>
+        <button class="btn btn-sm btn-outline-primary add-to-cart-btn mb-2">
+          <i class="bi bi-cart-plus"></i>
+        </button>
+        <br>
+        <a href="contactus.html" class="btn btn-sm btn-buy-now" data-aos="zoom-in">Buy Now</a>
+      </div>
+    </div>
+  </div>
+`;
+        // Add event listener to "Add to Cart"
+        const addToCartBtn = card.querySelector('.add-to-cart-btn');
+        addToCartBtn.addEventListener('click', () => addToCart(product));
+
+        container.appendChild(card);
+      });
+
+      // Set heading
+      heading.textContent = category === 'all'
+        ? 'All Products'
+        : category.charAt(0).toUpperCase() + category.slice(1) + "'s Products";
+    }
+
+    // Load products and apply category from URL
+    fetch('product.json')
+      .then(res => res.json())
+      .then(data => {
+        allProducts = data;
+        const params = new URLSearchParams(window.location.search);
+        const category = params.get('category') || 'all';
+        displayProducts(category.toLowerCase());
+      })
+      .catch(error => {
+        container.innerHTML = '<p class="text-danger text-center">Failed to load products.</p>';
+        console.error("Error loading products:", error);
+      });
+
+    // On load
+    updateCartCount();
+  </script>
+  </section>
+ <!-- footer -->
+<footer class="bg-black text-white pt-5 pb-4">
+  <div class="container">
+    <div class="row">
+      <!-- Social Icons -->
+      <div class="col-md-3 mb-4 text-center text-md-start">
+        <h5 class="text-uppercase mb-3 text-white">Follow Us</h5>
+        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+        <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-4"></i></a>
+        <a href="#" class="text-white me-3"><i class="bi bi-linkedin fs-4"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-youtube fs-4"></i></a>
+      </div>
+      <!-- Company Info -->
+      <div class="col-md-3 mb-4">
+        <h5 class="text-uppercase text-white">Wear Together</h5>
+        <p>Stylish clothing for Men, Women, and Kids. Shop the latest trends with comfort and confidence.</p>
+      </div>
+      <!-- Categories -->
+      <div class="col-md-3 mb-4">
+        <h5 class="text-uppercase text-white">Categories</h5>
+        <p><a href="shop.html" class="text-white text-decoration-none">Men</a></p>
+        <p><a href="shop.html" class="text-white text-decoration-none">Women</a></p>
+        <p><a href="shop.html" class="text-white text-decoration-none">Kids</a></p>
+        <p><a href="shop.html" class="text-white text-decoration-none">Accessories</a></p>
+      </div>
+    <!-- Newsletter Signup -->
+<div class="col-md-3 mb-4">
+  <h5 class="text-uppercase text-white">Newsletter</h5>
+  <p>Subscribe to get special offers, free giveaways, and new arrivals.</p>
+  <form>
+    <div class="input-group">
+      <input type="email" class="form-control" placeholder="Your email" required>
+      <button class="btn btn-danger" type="submit"><i class="bi bi-envelope-fill"></i></button>
+    </div>
+  </form>
+</div>
+    <hr class="border-secondary">
+    <div class="text-center">
+      <p class="mb-0">© 2025 <span class="text-white">Wear Together</span>. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+<!-- Back to Top Button -->
+<a href="#" id="backToTopBtn" class="btn btn-dark rounded-circle"
+   style="position: fixed; bottom: 80px; right: 20px; z-index: 9999; font-size: 28px; display: none;">
+  <i class="bi bi-arrow-up-circle text-white"></i>
+</a>
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/923001234567" target="_blank" class="btn btn-success rounded-circle"
+   style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; font-size: 28px;">
+  <i class="bi bi-whatsapp text-white"></i>
+</a>
+<!-- Scroll Script -->
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+  window.addEventListener("scroll", () => {
+    backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+  backToTopBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+</body>
+</html>
