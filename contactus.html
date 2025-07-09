@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wear Together</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+     <link rel="stylesheet" href="contactus.css">
+     <link rel="icon" href="clothing-logo.jpeg.jpeg">
+</head>
+<body>
+    <!-- navbar -->
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" data-aos="zoom-in">
+        Wear Together
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item dropdown" id="shopDropdown">
+            <a class="nav-link dropdown-toggle" href="shop.html" role="button" data-bs-toggle="dropdown">Shop</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="shop.html" onclick="filterProducts('all')">All</a></li>
+              <li><a class="dropdown-item" href="shop.html" onclick="filterProducts('men')">Men</a></li>
+              <li><a class="dropdown-item" href="shop.html" onclick="filterProducts('women')">Women</a></li>
+              <li><a class="dropdown-item" href="shop.html" onclick="filterProducts('kids')">Kids</a></li>
+              <li><a class="dropdown-item" href="shop.html" onclick="filterProducts('accessories')">Accessories</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="prices.html">Prices</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactus.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link cart-icon" href="#">🛒 Cart</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script>
+const dropdown = document.getElementById('shopDropdown');
+    dropdown.addEventListener('mouseenter', () => {
+      if (window.innerWidth > 991) {
+        const dropdownMenu = bootstrap.Dropdown.getOrCreateInstance(dropdown.querySelector('[data-bs-toggle="dropdown"]'));
+        dropdownMenu.show();
+      }
+    });
+    dropdown.addEventListener('mouseleave', () => {
+      if (window.innerWidth > 991) {
+        const dropdownMenu = bootstrap.Dropdown.getOrCreateInstance(dropdown.querySelector('[data-bs-toggle="dropdown"]'));
+        dropdownMenu.hide();
+      }
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+<!-- //banner -->
+ <section class="hero-banner">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 data-aos="zoom-in">Wear Together</h1>
+      <p data-aos="fade-up">Wear Confidence – For Him, Her, and the Little Ones</p>
+      <a href="index.html" class="shop-btn" data-aos="zoom-in">Shop Now</a>
+    </div>
+  </section>
+    <!-- top heading -->
+   <div class="section-heading">
+  <h2 data-aos="fade-down">Shop by Category</h2>
+</div>
+<!-- cards -->
+ <div class="card-container" data-aos="fade-up">
+  <div class="card">
+    <img src="men-12.jpg" alt="Men">
+    <h3>Men</h3>
+    <a href="index.html">
+    <div class="view-more">View More</div>
+   </a>
+  </div>
+  <div class="card">
+    <img src="womwn-12.jpg" alt="Women">
+    <h3>Women</h3>
+    <a href="index.html">
+    <div class="view-more">View More</div>
+   </a>
+  </div>
+  <div class="card">
+    <img src="kid-12.jpg" alt="Kids">
+    <h3>Kids</h3>
+   <a href="index.html">
+    <div class="view-more">View More</div>
+   </a>
+  </div>
+   <div class="card">
+    <img src="accessories-12.jpg" alt="Kids">
+    <h3>Accessories</h3>
+   <a href="index.html">
+    <div class="view-more">View More</div>
+   </a>
+  </div>
+</div>
+<!-- how to contact -->
+ <section class="contact-info-section">
+  <div class="info-heading">
+    <h2 data-aos="fade-down">We’re Here for You</h2>
+  </div>
+  <div class="info-paragraph" data-aos="fade-up">
+    <p>
+      Have questions or need help choosing the right style? Reach out to us through our contact form below. 
+      Just enter your name, contact number, email, and select your preferred category—Men, Women, Kids, or Accessories. 
+      Our team will respond promptly to assist you. 
+      You can also visit our shop at Manzoor Colony for an in-person experience. 
+      We're here to provide quality service both online and offline. 
+      Get in touch today and let's upgrade your wardrobe together!
+    </p>
+  </div>
+</section>
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5 text-white" data-aos="zoom-in">Get in Touch</h2>
+      <div class="row align-items-center">
+        <!-- Left Image -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="contact-us.jpg" alt="Contact Us" class="img-fluid rounded shadow" data-aos="zoom-in">
+        </div>
+        <!-- Right Form -->
+        <div class="col-md-6">
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  placeholder="Name" 
+                  required 
+                  pattern="[A-Za-z ]{2,}" 
+                  title="Name must contain at least 2 letters and only alphabets.">
+              </div>
+              <div class="col-md-6">
+                <input 
+                  type="tel" 
+                  class="form-control" 
+                  placeholder="Contact Number" 
+                  required 
+                  pattern="^[0-9]{10,15}$" 
+                  title="Enter a valid phone number with 10 to 15 digits.">
+              </div>
+              <div class="col-md-6">
+                <input 
+                  type="email" 
+                  class="form-control" 
+                  placeholder="Email" 
+                  required 
+                  title="Enter a valid email address.">
+              </div>
+              <div class="col-md-6">
+                <select class="form-select" required title="Please select a category.">
+                  <option value="">Select Category</option>
+                  <option value="men">Men</option>
+                  <option value="women">Women</option>
+                  <option value="kids">Kids</option>
+                </select>
+              </div>
+              <!-- Message Input -->
+              <div class="col-12">
+                <textarea 
+                  class="form-control" 
+                  rows="4" 
+                  placeholder="Your Message" 
+                  required 
+                  title="Please enter your message."></textarea>
+              </div>
+              <!-- Centered Button -->
+              <div class="col-12 text-center mt-2">
+                <button type="submit" class="shop-btn" data-aos="zoom-in">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Google Location Section -->
+  <section class="map-section">
+    <h3 class="mb-3" data-aos="zoom-in">Location: Manzoor Colony</h3>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.347478728927!2d67.05374371499936!3d24.852630584053763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e7bbff7a6e3%3A0x5b20b8cfbc2ed289!2sManzoor%20Colony%2C%20Karachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1625144213417"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </section>
+<!-- footer -->
+<footer class="bg-black text-white pt-5 pb-4">
+  <div class="container">
+    <div class="row">
+      <!-- Social Icons -->
+      <div class="col-md-3 mb-4 text-center text-md-start">
+        <h5 class="text-uppercase mb-3 text-white">Follow Us</h5>
+        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+        <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-4"></i></a>
+        <a href="#" class="text-white me-3"><i class="bi bi-linkedin fs-4"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-youtube fs-4"></i></a>
+      </div>
+      <!-- Company Info -->
+      <div class="col-md-3 mb-4">
+        <h5 class="text-uppercase text-white">Wear Together</h5>
+        <p>Stylish clothing for Men, Women, and Kids. Shop the latest trends with comfort and confidence.</p>
+      </div>
+      <!-- Categories -->
+      <div class="col-md-3 mb-4">
+        <h5 class="text-uppercase text-white">Categories</h5>
+        <p><a href="shop.html" class="text-white text-decoration-none">Men</a></p>
+        <p><a href="shop.html" class="text-white text-decoration-none">Women</a></p>
+        <p><a href="shop.html" class="text-white text-decoration-none">Kids</a></p>
+        <p><a href="shop.html" class="text-white text-decoration-none">Accessories</a></p>
+      </div>
+    <!-- Newsletter Signup -->
+<div class="col-md-3 mb-4">
+  <h5 class="text-uppercase text-white">Newsletter</h5>
+  <p>Subscribe to get special offers, free giveaways, and new arrivals.</p>
+  <form>
+    <div class="input-group">
+      <input type="email" class="form-control" placeholder="Your email" required>
+      <button class="btn btn-danger" type="submit"><i class="bi bi-envelope-fill"></i></button>
+    </div>
+  </form>
+</div>
+    <hr class="border-secondary">
+    <div class="text-center">
+      <p class="mb-0">© 2025 <span class="text-white">Wear Together</span>. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+<!-- Back to Top Button -->
+<a href="#" id="backToTopBtn" class="btn btn-dark rounded-circle"
+   style="position: fixed; bottom: 80px; right: 20px; z-index: 9999; font-size: 28px; display: none;">
+  <i class="bi bi-arrow-up-circle text-white"></i>
+</a>
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/923001234567" target="_blank" class="btn btn-success rounded-circle"
+   style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; font-size: 28px;">
+  <i class="bi bi-whatsapp text-white"></i>
+</a>
+<!-- Scroll Script -->
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+  window.addEventListener("scroll", () => {
+    backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+  backToTopBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+  </body>
+</html>
